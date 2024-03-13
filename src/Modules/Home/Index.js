@@ -28,20 +28,20 @@ export default class extends React.Component {
 				
 				<section className="sl-section">
 				<div className="container">
-					<div className="sl-section__header">
+					{/* <div className="sl-section__header"> */}
 						<h2>
-						<a title="Homepage">Tiêu đề</a>
+						<a title="Homepage"></a>
 						</h2>
-					</div>
+					{/* </div> */}
 					
-						<div className="history-main">
+						{/* <div className="history-main">
 						<div className="history-left">
 							<div className="history-child">
-							<p>Nội dung trang chủ
+							<p>
 							</p>
 							</div>
 						</div>
-						</div>
+						</div> */}
 					</div>
 				</section>
 			</React.Fragment>
