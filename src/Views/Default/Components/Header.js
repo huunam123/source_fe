@@ -62,36 +62,29 @@ class Header extends React.Component{
 					<AppBar id="nl-header" color="inherit" className={this.state.bgTransparent==true?'transparent':''}>
 						<Toolbar>
 							<div id="nl-header__mastehead" className={this.state.bgTransparent==true?'transparent':''}>
+								
 								<div className="d-flex">
+									111
 									<div id="guide-nav" className="guide-render d-none d-lg-block">
+										11111
 										<nav id="guide-menu">
+											22222
 											<ul>
 												<li>
-													<Link href="/">
-														<a title="Trang chủ" className={this.props.router.query.pages[0]=='homepage'?'active':''}>Trang chủ</a>
+													<Link href="/homepage">
+														<a title=" " className={this.props.router.query.pages[0]=='homepage'?'active':''}></a>
 													</Link>
 												</li>
 												<li>
-													<div className="logo">
-														<Link href="/">
-															<a title="MCV"><Image className="img-fluid" alt="Logo" src="/images/logomcv.png" width={165} height={80}/></a>
-														</Link>
-													</div>
-												</li>
-												<li>
 													<Link href="/news">
-														<a title="Tin tức" className={(this.props.router?.query?.pages&&(this.props.router.query.pages[0]=='news'))?'active':''}>Tin tức</a>
+														<a title="" className={(this.props.router?.query?.pages&&(this.props.router.query.pages[0]=='news'))?'active':''}></a>
 													</Link>
 												</li>
 											</ul>
 										</nav>
 									</div>
+									22222
 									<div id="guide-nav-mb" className="guide-render">
-										<div className="logo">
-											<Link href="/">
-												<a title="MCV"><Image className="img-fluid" alt="Logo" src="/images/logomcv.png" width={165} height={80}/></a>
-											</Link>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -102,6 +95,8 @@ class Header extends React.Component{
 		)
 	}
 }
+
+
 
 const mapStateToProps=state=>{
 	return {

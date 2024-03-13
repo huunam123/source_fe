@@ -35,7 +35,7 @@ class Banner extends React.Component {
 		_result.push({
 			'type': 'cover',
 			'id': '',
-			'title': "Bạn muốn trở thành nhân vật xuất hiện trên MCV Network?",
+			// 'title': "Bạn muốn trở thành nhân vật xuất hiện trên MCV Network?",
 			'thumbnail': '/images/banner1.png',
 			'link': '',
 		});
@@ -83,7 +83,7 @@ class Banner extends React.Component {
 										<div className="nl-banner__image">
 											{(banner.type=='cover')?(
 											<a onClick={this.handleLink} data-link={banner.link} title={banner.title}>
-												<img className="img-fluid" alt={banner.title} src={banner.thumbnail} />
+												{/* <img className="img-fluid" alt={banner.title} src={banner.thumbnail} /> */}
 												<div className="des-fluid">{banner.title}</div>
 											</a>
 											):(

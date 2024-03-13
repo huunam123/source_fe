@@ -25,9 +25,24 @@ h1,h2,h3,h4,h5,h6,b,strong{
 	margin: 0;
 }
 
-p{
-	margin: 0;
+//chỉnh dưới chỗ footer 
+.p{
+
+	.anDatAll {
+		position: relative;
+		letter-spacing: 0.25px;
+		line-height: 28px;
+	}
+	
+	position: relative;
+	margin-left: 100px;
+	padding:10px;
+	letter-spacing: 0.25px;
+    line-height: 28px;
 }
+
+
+
 
 a{
 	cursor: pointer;
@@ -138,7 +153,11 @@ body[style^="padding-right"]{
 
 	@media (min-width: 1200px){
 		max-width: 100%;
-		padding: 0 96px;
+		padding: 0 100px;
+		margin-left: 200px;
+		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
 	}
 
 	// @media (min-width: 1200px) and (max-width: 1919px){
@@ -165,7 +184,7 @@ body[style^="padding-right"]{
 	width: 100%;
 	min-height: 100vh;
 	flex-direction: column;
-	background-color: $bg-primary;
+	background-color: #ffffff;
 	font-size: $font-size-body;
 	font-family: $font-family-base;
 	padding-top: $header-height-pc;

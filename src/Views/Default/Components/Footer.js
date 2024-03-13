@@ -19,94 +19,126 @@ class Footer extends React.Component{
 	render(){
 		return(
 			<>
-				<footer id="nl-footer">
-					<div className="nl-footer__top">
-						<div className="container">
-							<div className="inner">
-								<div className="logo">
-									<a title="MCV"><img alt="Logo" src="/images/logomcv.png" width="120"/></a>
+
+			
+		<footer id="nl-footer">
+						<div className="nl-footer__top">
+							<div className="container">
+								<div className="inner">
+												{/* <div className="menu--"> */}
+									<div className="serviceCategoriesList">
+											<div className="Logo">
+											
+												<img alt="image" src="/images/andat.png" width="110" />
+
+												<div className="logo-description">
+													Phòng khám đa khoa quốc tế An Đạt mong muốn chung tay góp sức cho ngành y tế nước nhà tạo nên một cộng đồng khỏe mạnh, một xã hội an yên và hạnh phúc.
+												</div>
+											
+											</div>
+									
+											<div className="menuLeft">
+													<div className="menu-contact-info">Thông tin liên hệ</div>
+													<div className="location--">
+														<img
+														className="markerPin02Icon"
+														alt=""
+														src="/images/location.png"
+														/>
+														<div className="location">
+															Số 37 đường 70 Yên Xá, Tân Triều, Thanh Trì, Hà Nội
+														</div>
+													</div>
+													<div className="hotline">
+														<img className="phoneIcon1" alt="" src="/images/hotline.png" />
+														<div className="hotline0972978">
+															Hotline: 0972 978 933
+														</div>
+													</div>
+													<div className="email">
+														<img className="mail01Icon" alt="" src="/images/email.png" />
+														<div className="emailContactandatcliniccom">
+															Email: contact@andatclinic.com
+														</div>
+													</div>
+											</div>  
+												<div className="menuLeft1">
+														<div className="menu-ds">Danh sách dịch vụ</div>
+														<div className="menu-tq">Khám sức khoẻ tổng quát</div>
+														<div className="menu-lx">Khám sức khoẻ lái xe</div>
+														<div className="menu-ut">Tầm soát ung thư</div>
+														<div className="menu-dl">Dịch vụ da liễu</div>
+												</div>
+
+												<div className="menuLeft2">
+															<div className="menu--kh">Hỗ trợ khách hàng</div>
+															<div className="menu--lh">Liên hệ</div>
+															<div className="menu--introduction">Giới thiệu</div>
+															<div className="menu--recruitment">Tuyển dụng</div>
+															<div className="menu--question">Câu hỏi thường gặp</div>
+															<div className="menu--security">Chính sách bảo mật</div>
+															<div className="menu--Terms-service">Điều khoản dịch vụ</div>
+													</div>
+									</div>
+								
 								</div>
 
-								{/* <div className="dowwn-app">
-									<div className="img">
-										<a href="https://apps.apple.com/VN/app/id1545324313?mt=8" target="_blank" title="Tải app"><img className="img-fluid" alt="App Store" src="/images/img-app__ios.png" /></a>
-									</div>
-									<div className="img">
-										<a href="https://play.google.com/store/apps/details?id=vn.com.net_love.app" target="_blank" title="Tải app"><img className="img-fluid" alt="Google Play" src="/images/img-app__adr.png" /></a>
-									</div>
-								</div> */}
-
-								<div className="social">
-									<p>Kết nối với chúng tôi:</p>
-									{/* <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i className="fab fa-facebook-square"></i></a> */}
-									{/* <a href="https://twitter.com/" title="Twitter" target="_blank"><i className="fab fa-twitter-square"></i></a> */}
-									<a href="https://www.youtube.com/c/MCVMedia" title="Youtube" target="_blank"><i className="fab fa-youtube"></i></a>
-									{/* <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i className="fab fa-instagram"></i></a> */}
-									{/* <a href="https://www.tiktok.com/" title="Tiktok" target="_blank"><i className="fab fa-tiktok"></i></a> */}
-									<a href="https://www.linkedin.com/company/mcv-group/" title="Linkedin" target="_blank"><i className="fab fa-linkedin"></i></a>
-								</div>
+							</div>
+						
+						</div>
+			
+						<div className="bottomBar">
+							<div className="bottomBar-descrption">
+								Giấy phép kinh doanh số: 0109614417 do Sở kế hoạch và Đầu tư Tp Hà
+								Nội cấp ngày 28/04/2021 I Người đại diện: Nguyễn Thị Hạnh
+							</div>
+							<div className="bottomBar-TC">
+								Lượt truy cập trong ngày: 32,839
 							</div>
 						</div>
-					</div>
 
-					<div className="nl-footer__middle">
-						<div className="container">
-							<div className="line"></div>
-							<div className="row">
-								<div className="col-lg-6">
-									<div className="ctn">
-										<h3>CÔNG TY CỔ PHẦN TẬP ĐOÀN MCV</h3>
-										{/* <p>Trụ sở: 18Bis/22/1I Nguyễn Thị Minh Khai, P. Đa Kao, Q. 1, TP HCM</p> */}
-										<p>MST: 0102 154 249</p>
-										<p>Văn phòng: 19A, E Office Park, KCX Tân Thuận, P. Tân Thuận Đông, Q. 7, TP HCM</p>
-										<p>ĐT: <a href="tel:02462752435" title="024 6275 2435">024 6275 2435</a> | Email: <a href="mailto:info@mcv.com.vn" title="info@mcv.com.vn">info@mcv.com.vn</a></p>
-										<p>0102154249 do Sở KHDT Hà Nội cấp ngày 30/01/2007, thay đổi lần thứ 04 ngày 30/11/2016</p>
-									</div>
-								</div>
 
-								<div className="col-lg-6">
-									<div className="row">
-										{/* <div className="col-md-4">
-											<dl>
-												<dt>Hỗ trợ</dt>
-												<dd>
-													<Link href='https://mcv.com.vn/lien-he'><a title="Liên hệ hỗ trợ">Liên hệ hỗ trợ</a></Link>
-													<a title="Trung tâm trợ giúp">Trung tâm trợ giúp</a>
-												</dd>
-											</dl>
-										</div>
-										<div className="col-md-4">
-											<dl>
-												<dt>Hợp tác</dt>
-												<dd>
-													<a title="Liên hệ quảng cáo">Liên hệ quảng cáo</a>
-													<a title="Liên hệ hợp tác">Liên hệ hợp tác</a>
-												</dd>
-											</dl>
-										</div> */}
-										<div className="col-md-4">
-											<dl>
-												<dt>Pháp lý</dt>
-												<dd>
-													<Link href="/privacy"><a title="Chính sách quyền riêng tư">Chính sách quyền riêng tư</a></Link>
-													<Link href="/terms"><a title="Điều khoản sử dụng">Điều khoản sử dụng</a></Link>
-												</dd>
-											</dl>
-										</div>
-									</div>
-								</div>
+			{/* </div> */}
+					<div className="bottomBar1">
+						<div className="menuLeft3">
+
+							<p className="anDatAll">© 2023 An Dat. All rights reserved.</p>
+						</div>
+
+						<div className="menuLeft4">
+							<div className="navMenuRight">
+									<img
+											className="iconfacebook"
+											alt=""
+											src="/images/facebook.png"
+										/>
+										<img
+											className="iconyoutobe"
+											alt=""
+											src="/images/youtube-kids.png"
+										/>
+										<img
+											className="iconinstagram"
+											alt=""
+											src="/images/instagram.png"
+										/>
+										<img
+											className="icontiktok"
+											alt=""
+											src="/images/tiktok.png"
+										/>
+										<img
+											className="icontw"
+											alt=""
+											src="/images/twitter.png"
+										/>
+
 							</div>
-							<div className="line"></div>
 						</div>
-					</div>
+				</div>
+		</footer>
 
-					<div className="nl-footer__bottom">
-						<div className="container">
-							<p className="text-center">Copyright © 2023 MCV Group Corporation. All Rights Reserved.</p>
-						</div>
-					</div>
-				</footer>
-
+			
 				<BackToTop {...this.props}>
 					<Fab color="secondary" size="small" aria-label="scroll back to top" onClick={this.handleScrollTop}>
 						<i className="fas fa-angle-up"></i>
