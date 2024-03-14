@@ -70,7 +70,7 @@ class Footer extends React.Component{
 														<div className="menu-dl">Dịch vụ da liễu</div>
 												</div>
 
-												<div className="menuLeft2">
+													<div className="menuLeft2">
 															<div className="menu--kh">Hỗ trợ khách hàng</div>
 															<div className="menu--lh">Liên hệ</div>
 															<div className="menu--introduction">Giới thiệu</div>

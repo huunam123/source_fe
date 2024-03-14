@@ -15,8 +15,8 @@
 
 	@include media-breakpoint-up(lg){
 		#nl-header__mastehead{
-			height: 45px ;
-			padding: 0 50px ;
+			// height: 35px ;
+			//padding: 0 50px ;
 			width: 100%;
 			flex: 0 0 100%;
 			overflow: hidden;
@@ -79,17 +79,17 @@
 	}
 
 	#nl-header__mastehead{
-		background-color:#f41c1c ;
+		//background: color #cb0000; ;
 		transition:background-color .4s;
 		@include box-shadow($header-shadow);
 
 		@include media-breakpoint-up(md){
 			&.transparent{
-				background-image: linear-gradient(to bottom,rgba(255, 0, 0, 0.8) 10%, rgba(255, 23, 23, 0.889));
+				//background-image: linear-gradient(to bottom,rgba(255, 0, 0, 0.8) 10%, rgba(255, 23, 23, 0.889));
 				box-shadow: inherit;
-				-webkit-box-shadow: inherit;
+				//-webkit-box-shadow: inherit;
 				-moz-box-shadow: inherit;
-				background-color: transparent;
+				//background-color: #cb0000;
 				transition:background-color .4s;
 			}
 
@@ -117,4 +117,430 @@
 			}
 		}
 	}
+	.headers {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		z-index: 5;
+		text-align: left;
+		font-size: 12px;
+		color: #fff;
+		font-family: Roboto;
+	}
+	.headers,.menuBar{
+		align-self: stretch;
+		display: flex;
+		max-width: 100%;
+	}
+
+// khunng header nguyên cụm 
+	.topBar {
+		align-self: stretch;
+		background-color: #cb0000;
+		justify-content: center;
+		// padding: 8px 20px;
+		box-sizing: border-box;
+	}
+	.topBar {
+		gap: 0 24px;
+		max-width: 100%;
+	}
+// cụm sdt và time 
+	.text {
+		width: 580px;
+		gap: 0 24px;
+		max-width: 100%;
+	}
+
+	.card1, .text{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0 4px;
+	}
+	.card2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0 4px;
+	  }
+
+	  .markerPin01Icon {
+		height: 16px;
+		width: 16px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+		min-height: 16px;
+	  }
+
+	  .card3 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0 4px;
+	  }
+	  .language {
+		position: relative;
+		letter-spacing: 0.4px;
+		white-space: nowrap;
+	  }
+
+	  .arrowDropDownIcon {
+		height: 16px;
+		width: 16px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+		min-height: 16px;
+	
+	  }
+
+	  .arrowDropDownIcon1 {
+		height: 24px;
+		width: 24px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+	  }
+
+	  .arrowDropDownIcon2 {
+		height: 24px;
+		width: 24px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+	  }
+	  .arrowDropDownIcon3 {
+		height: 24px;
+		width: 24px;
+		position: relative;
+		overflow: hidden;
+		flex-shrink: 0;
+	  }
+// riêng của hotline
+	.card {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0 4px;
+	}
+
+	.card1,.text {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0 4px;
+	}
+
+	
+.phoneIcon {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 16px;
+    
+  }
+  .pagination {
+    position: relative;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 4px;
+  }
+
+  .card1,
+  .text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 4px;
+  }
+  .text {
+    width: 580px;
+    gap: 0 24px;
+    max-width: 100%;
+	//margin-left: 300px;
+  }
+
+  .clockIcon,
+  .th2 {
+    position: relative;
+  }
+  .clockIcon {
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 16px;
+  }
+  .th2 {
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+
+
+  .text1 {
+    width: 580px;
+    justify-content: flex-end;
 }
+.text1,.topBar {
+    gap: 0 24px;
+    max-width: 100%;
+}
+.social,.text1,.topBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.location {
+    position: relative;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+
+  .icon-facebook,
+  .icon-twitter,
+  .icon-youtobe,
+  .icon-instagram,
+  .icon-tiktok {
+    height: 16px;
+    width: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 16px;
+  }
+
+  .social {
+    justify-content: flex-start;
+    gap: 0 8px;
+  }
+
+  .social,
+  .text1,
+  .topBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .headers,
+  .menuBar {
+    align-self: stretch;
+    display: flex;
+    max-width: 100%;
+  }
+  .menuBar {
+    height: 88px;
+    background-color: #fff;
+    border-bottom: 1px solid #dadce0;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    gap: 0 24px;
+    font-size: 16px;
+    color: #0e1013;
+	margin-top: 20px;
+  }
+
+  .image36Icon {
+    height: 56px;
+    width: 161.7px;
+    position: relative;
+    object-fit: cover;
+  }
+  .linH {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 15px 0 0;
+    box-sizing: border-box;
+    gap: 0 15.71px;
+    max-width: 100%;
+  }
+
+  .Introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .introduction1,
+  .homepage {
+    position: relative;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .introduction2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+	.introduction3 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+			.menu-service {
+			position: relative;
+			letter-spacing: 0.4px;
+			font-weight: 500;
+			white-space: nowrap;
+		}
+
+		.menu--doctor,
+		.memu--infrastructure {
+			position: relative;
+			letter-spacing: 0.4px;
+			font-weight: 500;
+			white-space: nowrap;
+		}
+		.menu--news {
+			color: #e02401;
+		  }
+		  .menu--support,
+		  .menu--hotline,
+		  .menu--news {
+			position: relative;
+			letter-spacing: 0.4px;
+			font-weight: 500;
+			white-space: nowrap;
+		  }
+		  .menu--support {
+			position: relative;
+			letter-spacing: 0.1px;
+			line-height: 157%;
+			//text-transform: uppercase;
+			color: #000000;
+		  }
+
+		  .input {
+			height: 44px;
+			width: 180px;
+			background-color: #fff;
+			display: none;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 4px 0;
+			color: #80868b;
+		  }
+		  .input1 {
+			border-radius: 8px;
+			border: 1px solid #dadce0;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0 13px 0 11px;
+		  }
+
+		  .content,
+		  .input1 {
+			align-self: stretch;
+			flex: 1;
+			display: flex;
+			justify-content: flex-start;
+		  }
+
+		  .content {
+			overflow: hidden;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px 0;
+			box-sizing: border-box;
+			min-height: 24px;
+		  }
+
+		  .label {
+			align-self: stretch;
+			flex: 1;
+			position: relative;
+			letter-spacing: 0.15px;
+			line-height: 24px;
+			white-space: nowrap;
+		  }
+
+		  .icoutlineSearchIcon {
+			height: 24px;
+			width: 24px;
+			position: relative;
+			overflow: hidden;
+			flex-shrink: 0;
+			min-height: 24px;
+		  }
+		  .helperText {
+			width: 280px;
+			height: 20px;
+			position: relative;
+			font-size: 12px;
+			letter-spacing: 0.4px;
+			line-height: 166%;
+			color: #5f6368;
+			display: none;
+			align-items: center;
+			white-space: nowrap;
+		  }
+		  .calendarIcon {
+			height: 24px;
+			width: 24px;
+			position: relative;
+			overflow: hidden;
+			flex-shrink: 0;
+			min-height: 24px;
+		  }
+		  .icoutlineSearchIcon {
+			height: 24px;
+			width: 24px;
+			position: relative;
+			overflow: hidden;
+			flex-shrink: 0;
+			min-height: 24px;
+		  }
+		  .subtitle {
+			position: relative;
+			font-size: 16px;
+			letter-spacing: 0.46px;
+			line-height: 150%;
+			font-weight: 500;
+			font-family: Roboto;
+			color: #fff;
+			text-align: left;
+		  }
+		  .button {
+			cursor: pointer;
+			border: 0;
+			padding: 10px 18px;
+			background-color: #e02401;
+			border-radius: 8px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 0 8px;
+			white-space: nowrap;
+		  }
+}
+

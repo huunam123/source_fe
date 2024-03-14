@@ -153,8 +153,8 @@ body[style^="padding-right"]{
 
 	@media (min-width: 1200px){
 		max-width: 100%;
-		padding: 0 100px;
-		margin-left: 200px;
+		//padding: 0 100px;
+		margin-left: 300px;
 		display: flex;
   		justify-content: space-between;
   		align-items: center;
@@ -181,9 +181,17 @@ body[style^="padding-right"]{
 
 #nl-wrapper{
 	display: flex;
+	align-self: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
 	width: 100%;
 	min-height: 100vh;
 	flex-direction: column;
+	gap: 0 24px;
+    max-width: 100%;
 	background-color: #ffffff;
 	font-size: $font-size-body;
 	font-family: $font-family-base;
