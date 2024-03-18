@@ -14,7 +14,7 @@ div[class^='Mui'],label[class^='Mui'],span[class^='Mui']{
 }
 
 #__next{
-	min-height: 100vh;
+	//min-height: 100vh;
 	position: relative;
 	color: $text-color-primary;
 	font-size: $font-size-fullPage;
@@ -102,7 +102,7 @@ div[class^="Mui"]{
 }
 
 body.ovh{
-	overflow: hidden;
+	overflow: auto;
 	padding-right: 17px;
 
 	@include media-breakpoint-down(lg){
@@ -117,13 +117,13 @@ body.ovh{
 		}
 	}
 
-	#guide-wrapper{
-		padding-right: 17px;
+	// #guide-wrapper{
+	// 	padding-right: 17px;
 
-		@include media-breakpoint-down(lg){
-			padding-right: 0;
-		}
-	}
+	// 	@include media-breakpoint-down(lg){
+	// 		padding-right: 0;
+	// 	}
+	// }
 }
 
 body[class^="__tt-dark-mode"]{
@@ -158,6 +158,7 @@ body[style^="padding-right"]{
 		display: flex;
   		justify-content: space-between;
   		align-items: center;
+		//   border-top:  solid #b1b1b1;
 	}
 
 	// @media (min-width: 1200px) and (max-width: 1919px){
@@ -179,46 +180,53 @@ body[style^="padding-right"]{
 	--bs-gutter-x: 32px;
 }
 
-#nl-wrapper{
-	display: flex;
-	align-self: stretch;
-    justify-content: center;
-    box-sizing: border-box;
-	display: flex;
-    flex-direction: row;
-    align-items: center;
-	width: 100%;
-	min-height: 100vh;
-	flex-direction: column;
-	gap: 0 24px;
-    max-width: 100%;
-	background-color: #ffffff;
-	font-size: $font-size-body;
-	font-family: $font-family-base;
-	padding-top: $header-height-pc;
-	@include transition(all .2s linear);
+// #nl-wrapper{
+	// //display: flex;
+	// align-self: stretch;
+    // justify-content: center;
+    // box-sizing: border-box;
+	// display: flex;
+    // flex-direction: column;
+    // align-items: center;
+	// //width: 100%;
+	// min-height: 100vh;
+	// max-height: 100%;
+	// margin: 0 auto;
+	// flex-direction: column;
+	// gap: 0 24px;
+    // max-width: 100%;
+	// background-color: #ffffff;
+	// font-size: 1.6rem;
+	// font-family:"Nunito Sans", sans-serif;
+	// padding-top: 160px;
+	// @include transition(all .2s linear);
 
-	@include media-breakpoint-down(lg){
-		padding-top: $header-height-mb;
-		padding-bottom: $navMobile-height;
+	// @include media-breakpoint-down(lg){
+	// 	padding-top: 55px;
+	// 	padding-bottom: 50px;
 
-		&.ovh{
-			overflow: hidden;
-			height: 100vh;
-		}
-	}
-}
+	// 	&.ovh{
+	// 		// overflow: hidden;
+	// 		height: 100vh;
+	// 	}
+	// }
+	// @media screen and (min-width: 768px) {
+	// 	.container {
+	// 		width: 100%; // Khi màn hình có độ rộng lớn hơn 768px, phần tử sẽ lấp đầy toàn bộ chiều rộng của viewport
+	// 	}
+	// }
+// }
 
-#nl-main{
-	max-width: 100%;
-	margin: auto;
+// #nl-main{
+// 	max-width: 100%;
+// 	margin: auto;
+// 	// overflow-y:auto;
+// 	@media (min-width: 1440px){
+// 		max-width: 1440px;
+// 	}
 
-	@media (min-width: 1440px){
-		max-width: 1440px;
-	}
-
-}
-
+// }
+		
 @include media-breakpoint-down(lg){
 	
 	.headerTitleMb{

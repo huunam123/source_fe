@@ -5,7 +5,7 @@
  */
 
 .ps {
-    overflow: hidden !important;
+    overflow: auto ;
     overflow-anchor: none;
     -ms-overflow-style: none;
     touch-action: auto;
@@ -114,14 +114,14 @@
 
 @supports (-ms-overflow-style: none) {
     .ps {
-        overflow: auto !important;
+         overflow: auto ;
     }
 }
 
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
     .ps {
-        overflow: auto !important;
+         overflow: auto ;
     }
 }
 

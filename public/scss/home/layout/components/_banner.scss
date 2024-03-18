@@ -240,7 +240,7 @@
 									display: -webkit-box;
 								    -webkit-box-orient: vertical;
 								    -webkit-line-clamp: 2;
-								    overflow: hidden;
+								    overflow: auto;
 								    transform-origin: left bottom;
 								    transform: scale(1) translate3d(0px, 0px, 0px);
 								    transition-duration: 1300ms;
@@ -335,6 +335,7 @@
 	position: relative;
 	z-index: 30;
 	margin-top: 0%;
+	 overflow-y:auto;
 
 	@media (min-width: 1600px) and (max-width: 1900px){
 		margin-top: 0%;
