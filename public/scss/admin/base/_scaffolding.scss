@@ -15,11 +15,10 @@ div[class^='Mui'],label[class^='Mui'],span[class^='Mui']{
 }
 
 #__next{
-	min-height: 100%;
+	// min-height: 100%;
 	display: flex;
 	position: relative;
-	color: $text-color-primary;
-	font-size: $font-size-fullPage;
+	font-size: 1.6rem;
 }
 
 h1,h2,h3,h4,h5,h6,b,strong{

@@ -23,7 +23,7 @@ $space-tab-active : 3px;
 			padding: 0px;
 			border-radius: 16px;
 			width: 592px;
-			overflow: hidden;
+			 overflow: auto;
 			max-height: 100%;
 			overflow-y: scroll;
 			.modal-inner{
@@ -36,7 +36,7 @@ $space-tab-active : 3px;
 		&.reviewCasting{
 			padding: 0px;
 			border-radius: 16px;
-			overflow: hidden;
+			 overflow: auto;
 			max-height: 100%;
 			overflow-y: scroll;
 			.modal-inner{
@@ -917,7 +917,7 @@ $space-tab-active : 3px;
 	position: absolute;
 	top: 38px;
 	left: 0;
-	// overflow: hidden;
+	overflow: auto;
 	@include box-shadow(0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%));
 	@include border-radius(8px);
 
@@ -1108,7 +1108,7 @@ $space-tab-active : 3px;
 			display: -webkit-box;
 		    -webkit-box-orient: vertical;
 		    -webkit-line-clamp: 1;
-		    overflow: hidden;
+		    overflow: auto;
 		}
 
 		.MuiButton-text{

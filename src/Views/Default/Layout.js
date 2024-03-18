@@ -118,18 +118,17 @@ class Layout extends React.Component{
 
 				<div id="nl-wrapper">
 					<Header renewTimeout={renewTimeout} renewToken={this.refreshToken}/>
-
-					{this.props.children}
-						{this.props.stateStatus.status.isSuccessful && <Snackbar open={this.props.stateStatus.status.isSuccessful} autoHideDuration={2000} onClose={this.handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
+					{/* {this.props.children} */}
+						{/* {this.props.stateStatus.status.isSuccessful && <Snackbar open={this.props.stateStatus.status.isSuccessful} autoHideDuration={2000} onClose={this.handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
 							<Alert severity="success">
 								{this.props.stateStatus.status.msg.text}
 							</Alert>
-						</Snackbar>}
-						{this.props.stateStatus.status.isFailure && <Snackbar open={this.props.stateStatus.status.isFailure} autoHideDuration={2000} onClose={this.handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
+						</Snackbar>} */}
+						{/* {this.props.stateStatus.status.isFailure && <Snackbar open={this.props.stateStatus.status.isFailure} autoHideDuration={2000} onClose={this.handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'right' }}>
 							<Alert severity="error">
 								{this.props.stateStatus.status.msg.text}
 							</Alert>
-						</Snackbar>}
+						</Snackbar>} */}
 					<Footer />
 
 					<NavigatorMobile />

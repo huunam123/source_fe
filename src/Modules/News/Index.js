@@ -47,6 +47,7 @@ export default class extends React.Component {
 											backgroundBody="gray"
 											onClickValue={item.id}
 											link={"news/"+ item.slug }
+											
 										/>
 									</div>
 								)}
