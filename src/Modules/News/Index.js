@@ -34,6 +34,7 @@ export default class extends React.Component {
 	render() {		
 		return (
 			<React.Fragment>
+				
 				{(this.state.dataPage&&this.state.dataPage.length>0)&&<>
 				<section className="sl-section">
 					<div className="container">

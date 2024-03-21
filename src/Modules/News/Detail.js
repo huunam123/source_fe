@@ -5,6 +5,7 @@ import React from "react";
 import {connect} from 'react-redux';
 import Action from '@libs/Action';
 
+
 /* Package Application */
 import {fetchApi,changeToSlug} from '@helpers/Common';
 
@@ -22,6 +23,7 @@ class Detail extends React.Component{
 
 	async componentDidMount() {
 		this._isMounted = true;
+    console.log(1111)
 		this.getData();
 		
 	}
@@ -55,8 +57,8 @@ class Detail extends React.Component{
 					<section className="sl-section">
 						<div className="container">
 						<div className="">
-                  <main className="imagee-title">
-                    <section className="tmsaticungth"> 
+                  {/* <main className="imagee-title"> */}
+                    {/* <section className="tmsaticungth"> 
                       <img
                         className="topbarMainIcon"
                         loading="eager"
@@ -89,7 +91,7 @@ class Detail extends React.Component{
                       </div>
                       </section>
 
-                  </main>
+                  </main> */}
                   <section className="pageSegmentation"> 
                       <div className="cartTinTuc">
                         <img

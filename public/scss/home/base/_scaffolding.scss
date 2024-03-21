@@ -3,7 +3,7 @@
 }
 
 html,body{
-	font-family: $font-family-base !important;
+	font-family:Roboto;
 	font-size: 62.5% !important;
 	font-weight: $font-weight-base !important;
 }
@@ -154,7 +154,7 @@ body[style^="padding-right"]{
 	@media (min-width: 1200px){
 		max-width: 100%;
 		//padding: 0 100px;
-		margin-left: 300px;
+		// margin-left: 300px;
 		display: flex;
   		justify-content: space-between;
   		align-items: center;
@@ -216,16 +216,16 @@ body[style^="padding-right"]{
 	// 	}
 	// }
 // }
+#nl-main{
+	
+ 	max-width: 100%;
+ 	margin: auto;
+ 	//  overflow-y:auto;
+	// @media (min-width: 1440px){
+	// 	max-width: 1440px;
+	// }
 
-// #nl-main{
-// 	max-width: 100%;
-// 	margin: auto;
-// 	// overflow-y:auto;
-// 	@media (min-width: 1440px){
-// 		max-width: 1440px;
-// 	}
-
-// }
+ }
 		
 @include media-breakpoint-down(lg){
 	
@@ -396,7 +396,7 @@ body[style^="padding-right"]{
 
 		.nl-banner__image{
 			 @include border-radius($card-image-borderRadius);
-			 overflow: hidden;
+			 overflow: auto;
 		}
 
 		.swiper{
@@ -586,7 +586,7 @@ body[style^="padding-right"]{
 }
 
 .backToTop{
-	position: fixed;
+	// position: fixed;
 	right: 15px;
 	bottom: 15px;
 	z-index: 500;

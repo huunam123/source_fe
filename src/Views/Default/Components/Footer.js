@@ -2,7 +2,7 @@
 
 /* Package System */
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import BackToTop from "@views/Default/Components/BackToTop";
 import Fab from "@mui/material/Fab";
 
@@ -19,9 +19,15 @@ class Footer extends React.Component {
     return (
       <>
 
+
+
+
+
+
+
         <footer id="nl-footer">
-          <div className="nl-footer__top">
-            <div className="container">
+          {/* <div className="nl-footer__top"> */}
+            {/* <div className="container">  */}
               <div className="inner">
                 
                 <div className="serviceCategoriesList">
@@ -51,7 +57,7 @@ class Footer extends React.Component {
                       <img
                         className="phoneIcon1"
                         alt=""
-                        src="/images/hotline.png"
+                        src="/images/telephone (6).png"
                       />
                       <div className="hotline0972978">
                         Hotline: 0972 978 933
@@ -61,7 +67,7 @@ class Footer extends React.Component {
                       <img
                         className="mail01Icon"
                         alt=""
-                        src="/images/email.png"
+                        src="images/email.png"
                       />
                       <div className="emailContactandatcliniccom">
                         Email: contact@andatclinic.com
@@ -89,8 +95,8 @@ class Footer extends React.Component {
                   </div>
                 </div>
                 </div>
-            </div>
-          </div>
+            {/* </div> */}
+          {/* </div> */}
 
           <div className="bottomBar">
             <div className="bottomBar-descrption">
@@ -102,29 +108,28 @@ class Footer extends React.Component {
          
          
           <div className="bottomBar1">
-            <div className="menuLeft3">
-              <p className="anDatAll">© 2023 An Dat. All rights reserved.</p>
-            </div>
+          <div className="anDatAll">© 2023 An Dat. All rights reserved.</div>
+            {/* <div className="menuLeft3">
+              
+            </div> */}
 
             <div className="menuLeft4">
               <div className="navMenuRight">
-                <img
-                  className="iconfacebook"
-                  alt=""
-                  src="/images/facebook.png"
-                />
+                <img className="iconfacebook" alt="" src="/images/facebook.png"/>
+
+                <img className="icontw" alt="" src="/images/twitter.png" />
+
                 <img
                   className="iconyoutobe"
                   alt=""
-                  src="/images/youtube-kids.png"
+                  src="/images/youtube.png"
                 />
                 <img
                   className="iconinstagram"
                   alt=""
                   src="/images/instagram.png"
                 />
-                <img className="icontiktok" alt="" src="/images/tiktok.png" />
-                <img className="icontw" alt="" src="/images/twitter.png" />
+                <img className="icontiktok" alt="" src="/images/tik-tok.png" />
               </div>
             </div>
           </div>
