@@ -2,7 +2,7 @@
 
 /* Package System */
 import React from "react";
-
+import {fetchApi,changeToSlug} from '@helpers/Common';
 /* Package Application */
 
 export default class extends React.Component {
@@ -10,25 +10,45 @@ export default class extends React.Component {
 	constructor(props) {
 		super(props);
 		this._isMounted = false;
+		
 		this.state = {
+			dataPage: []
 		}
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		this._isMounted = true;
+    console.log(1111)
+		this.getData();
+		
 	}
 
 	componentWillUnmount(){
 		this._isMounted = false;
 	}
 
+	async componentDidUpdate(prevProps,prevState){
+		if(this.state.dataPage.length==0){
+			this.getData();
+		}
+	}
+
+	getData = () =>{
+		try{
+			this._isMounted&&fetchApi(process.env.API_URL+'pl-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
+				dataPage: result.data.data
+			})).catch(e=>console.log(e));
+		} catch (e) {
+			console.log(e);
+		  }
+	}
+
 	render() {	
+    let _data = typeof(this.state.dataPage[0]) !== 'undefined' ? this.state.dataPage[0] :[];
+    console.log(_data)
 		return (
 			<React.Fragment>
 				<body>
-
-
-
 				<div className="second-mv">
                   <div className="titleBreadcrumbs">
                     <div className="archiveTitleParent">
@@ -103,7 +123,7 @@ export default class extends React.Component {
                             21:20 - 23/08/2022
                           </div>
                           <div className="mcvSeK1">
-						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ...
+						                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ...
                           </div>
                         </div>
                       </div>
@@ -122,8 +142,6 @@ export default class extends React.Component {
                           </div>
                         </div>
                       </div>
-
-
 					  <div className="cartTinTuc">
                         <img
                           className="menuBarIcon"
@@ -159,8 +177,6 @@ export default class extends React.Component {
                           </div>
                         </div>
                       </div>  
-
-					  
 					  <div className="cartTinTuc">
                         <img
                           className="menuBarIcon"
@@ -191,7 +207,7 @@ export default class extends React.Component {
                             21:20 - 23/08/2022
                           </div>
                           <div className="mcvSeK1">
-						  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ...
+						                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ...
                           </div>
                         </div>
                       </div>

@@ -20,6 +20,12 @@ export default class extends React.Component {
 		}
 	}
 
+	async componentDidMount() {
+		this._isMounted = true;
+    console.log(1111)
+		this.getData();
+		
+	}
 	componentDidMount() {
 		this._isMounted = true;
 		this._isMounted&&fetchApi(process.env.API_URL+'news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
@@ -31,7 +37,26 @@ export default class extends React.Component {
 		this._isMounted = false;
 	}
 
-	render() {		
+	
+	async componentDidUpdate(prevProps,prevState){
+		if(this.state.dataPage.length==0){
+			this.getData();
+		}
+	}
+
+	getData = () =>{
+		try{
+			this._isMounted&&fetchApi(process.env.API_URL+'pr-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
+				dataPage: result.data.data
+			})).catch(e=>console.log(e));
+		} catch (e) {
+			console.log(e);
+		  }
+	}
+
+	render() {	
+		let _data = typeof(this.state.dataPage[0]) !== 'undefined' ? this.state.dataPage[0] :[];
+
 		return (
 			<React.Fragment>
 				
