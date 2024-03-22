@@ -1,24 +1,16 @@
 #nl-footer {
   width: 100%;
-  // margin-top: 65px;
   background-color: #ffffff;
   font-size: 1.4rem;
- // margin-left: 300px;
   max-height: 200px;
   position: relative;
   border-top: 1px solid #e8eaed;
-  // margin-left: 200px;
-  margin-top: 500px;
+ 
     
     .inner {
       display: flex;
       padding: 10px 12px;
-      // justify-content: space-between;
-      // align-items: center;
-      // min-height: 90px;
-      // margin-left:  260px;
-      // // background: center;
-
+  
       @include media-breakpoint-down(md) {
         flex-wrap: wrap;
         flex-direction: column;
@@ -503,7 +495,7 @@
     justify-content: center;
     min-width: 592px;
     min-height: 28px;
-    margin-right: 200px;
+    margin-right: 569px;
   }
   .bottomBar1 {
     display: flex;
