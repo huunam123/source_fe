@@ -40,7 +40,7 @@ class Detail extends React.Component{
 
 	getData = () =>{
 		try{
-			this._isMounted&&fetchApi(process.env.API_URL+'news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
+			this._isMounted&&fetchApi(process.env.API_URL+'pl-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
 				dataPage: result.data.data
 			})).catch(e=>console.log(e));
 		} catch (e) {
@@ -57,6 +57,9 @@ class Detail extends React.Component{
 					<section className="sl-section">
 						<div className="container">
 					
+
+
+          
 						</div>
 					</section>
 				</div>
