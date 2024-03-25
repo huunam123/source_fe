@@ -26,12 +26,12 @@ export default class extends React.Component {
 		this.getData();
 		
 	}
-	componentDidMount() {
-		this._isMounted = true;
-		this._isMounted&&fetchApi(process.env.API_URL+'news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
-			dataPage: result.data.data
-		})).catch(e=>console.log(e));
-	}
+	// componentDidMount() {
+	// 	this._isMounted = true;
+	// 	this._isMounted&&fetchApi(process.env.API_URL+'pl-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
+	// 		dataPage: result.data.data
+	// 	})).catch(e=>console.log(e));
+	// }
 
 	componentWillUnmount(){
 		this._isMounted = false;
@@ -46,7 +46,7 @@ export default class extends React.Component {
 
 	getData = () =>{
 		try{
-			this._isMounted&&fetchApi(process.env.API_URL+'pr-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
+			this._isMounted&&fetchApi(process.env.API_URL+'pl-news?fqnull=deleted_at').then(result=>this._isMounted&&this.setState({
 				dataPage: result.data.data
 			})).catch(e=>console.log(e));
 		} catch (e) {
@@ -84,5 +84,19 @@ export default class extends React.Component {
 				</>}
 			</React.Fragment>
 		)
+	}
+}
+const mapStateToProps=state=>{
+	return {
+		stateStatus:state.status,
+		stateUser:state.user
+	}
+}
+const mapDispatchToProps=dispatch=>{
+	let _action = new Action();
+
+	return{
+		setStatus:(type,val)=>{dispatch(_action.setStatus(type,val))},
+		setValueStatus:(type,val)=>{dispatch(_action.setValueStatus(type,val))}
 	}
 }
