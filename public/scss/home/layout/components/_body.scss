@@ -119,7 +119,6 @@
   }
 
   .imagee-title {
-    width: 1224px;
     flex-direction: column;
     align-items: flex-end;
     // padding: 0 350px 50px;
@@ -130,7 +129,7 @@
     font-size: 14px;
     color: #475467;
     font-family: Inter;
-    padding: 60px;
+    padding: 82px;
   }
 
   
@@ -246,7 +245,7 @@
     width: 373px;
     border-radius: 8px;
     background-color: #751201;
-    display: none;
+ 
   }
   .image,
   .mcvSeK {
@@ -256,7 +255,7 @@
   }
   .mcvSeK {
     margin: 0;
-    height: 84px;
+    height: 51px;
     font-size: inherit;
     font-weight: 600;
     font-family: inherit;
@@ -271,6 +270,7 @@
     letter-spacing: 0.25px;
     line-height: 28px;
     white-space: nowrap;
+    padding: 12px;
   }
   .container,
   .sectionFrame {
@@ -346,13 +346,11 @@
      overflow: auto;
     flex-shrink: 0;
     object-fit: cover;
-    margin-left:12px;
   }
   .mcvSeK1 {
     position: relative;
     letter-spacing: 0.25px;
     line-height: 28px;
-    margin-left: 12px;
     font-size: 16px;
   }
   .numberBasedContent {
@@ -361,7 +359,6 @@
     max-width: 103%;
     flex-shrink: 0;
     white-space: nowrap;
-     margin-left: 12px;
     font-size: 12px;
   }
   

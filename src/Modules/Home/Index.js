@@ -12,6 +12,7 @@ export default class extends React.Component {
 
     this.state = {
       dataPage: [],
+      dataPin: []
     };
   }
 
@@ -74,6 +75,9 @@ export default class extends React.Component {
     if (this.state.dataPage.length == 0) {
       this.getData();
     }
+    if (this.state.dataPin.length == 0) {
+      this.getDataPin();
+    }
   }
 
   getData = () => {
@@ -85,6 +89,26 @@ export default class extends React.Component {
               this._isMounted &&
               this.setState({
                 dataPage: result.data.data,
+              })
+          )
+          .catch((e) => console.log(e));
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+
+  getDataPin = () => {
+    
+  console.log("this.state",this.state)
+    try {
+      this._isMounted &&
+        fetchApi(process.env.API_URL + "pl-news?fq=forcus:1&fqnull=deleted_at")
+          .then(
+            (result) =>
+              this._isMounted &&
+              this.setState({
+                dataPin: result.data.data,
               })
           )
           .catch((e) => console.log(e));
@@ -125,7 +149,55 @@ export default class extends React.Component {
             </div>
           </div>
 
-          <main className="imagee-title">
+
+           <main className="imagee-title">
+            <section className="tmsaticungth">
+              {this.state.dataPin && this.state.dataPin.length > 0 && (
+                <div key={this.state.dataPin[0].id}className="tmsaticungth"  >
+                   <img
+                    className="topbarMainIcon"
+                    loading="eager"
+                    alt=""
+                    src={
+                      this.state.dataPin[0].image != null
+                        ? `${(process.env.CDN_URL_S3)}${this.state.dataPin[0].image}`
+                        : ""
+                    }
+                  /> 
+
+              <div className="container">
+                  <div className="containerChild">
+                
+                  <h3 className="mcvSeK">
+                    "`MCV S&E ký kết hợp tác truyền thông chiến lược với GIGA
+                    Digital`"
+                  </h3>
+                  <div className="image">
+                    {this.state.dataPin[0].created_at}
+                  </div>
+                  <div className="sectionFrame">
+                    <div className="voNgy1310Container">
+                      <div className="voNgy1310">
+                        "`Vào ngày 13/10, Công ty Cổ phần Thể thao và Giải trí
+                        MCV (MCV S&E) và Công ty TNHH GIGA Distribution (GIGA
+                        Digital) đã chính thức ký kết hợp tác chiến lược.`"
+                      </div>
+                      <div className="haiNV">
+                        Hai đơn vị cùng hướng tới mục tiêu mang đến những giá
+                        trị thiết thực trong lĩnh lực truyền thông trên nền tảng
+                        truyền thông số, nâng tầm độ nhận diện thương hiệu trên
+                        thị trường.
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                </div>
+              )}
+            </section>
+          </main> 
+
+          {/* <main className="imagee-title">
             <section className="tmsaticungth">
               <img
                 className="topbarMainIcon"
@@ -138,7 +210,7 @@ export default class extends React.Component {
                 <h3 className="mcvSeK">
                   "`MCV S&E ký kết hợp tác truyền thông chiến lược với GIGA
                   Digital`"
-                </h3>
+                </h3>          
                 <div className="image">21:20 - 23/08/2022</div>
                 <div className="sectionFrame">
                   <div className="voNgy1310Container">
@@ -157,7 +229,7 @@ export default class extends React.Component {
                 </div>
               </div>
             </section>
-          </main>
+          </main>  */}
 
           <section className="pageSegmentation">
             {this.state.dataPage && this.state.dataPage.length > 0 && (
@@ -216,6 +288,51 @@ export default class extends React.Component {
           </section> */}
 
           <div className="containerWithPagination">
+            {Array.from({ length: 10 }, (_, i) => i + 1).map((pageNumber) => {
+              // Determine if the current page number should be displayed
+              const shouldDisplay =
+                pageNumber <= 3 || // Display the first three numbers
+                pageNumber >= 8 || // Display the last three numbers
+                Math.abs(pageNumber - this.state.currentPage) <= 1; // Display if within 1 page of current page
+
+              if (!shouldDisplay) {
+                // Display an ellipsis for skipped pages
+                return (
+                  <div key={pageNumber} className="paginationNumberBase">
+                    <div className="content1">
+                      <div className="number">...</div>
+                    </div>
+                  </div>
+                );
+              }
+
+              // Determine if the current page number is active
+              const isActive = this.state.currentPage === pageNumber;
+
+              // Define the class name based on whether the page is active or not
+              const className = `paginationNumberBase${
+                isActive ? " active" : ""
+              }`;
+
+              // Define the color based on whether the page is active or not
+              const textColor = isActive ? "red" : "black"; // Change color to red for active page
+
+              // Display the current page number
+              return (
+                <div
+                  key={pageNumber}
+                  className={className}
+                  onClick={() => this.handlePaginationClick(pageNumber)}
+                >
+                  <div className="content1">
+                    <div className={`number ${textColor}`}>{pageNumber}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* <div className="containerWithPagination">
             {Array.from({ length: 10 }, (_, i) => i + 1).map((pageNumber) => (
               <div
                 key={pageNumber}
@@ -230,6 +347,7 @@ export default class extends React.Component {
               </div>
             ))}
           </div>
+           */}
 
           {/* <div className="containerWithPagination">
             <div className="paginationNumberBase">
