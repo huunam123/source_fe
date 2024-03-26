@@ -789,11 +789,11 @@ header {
    // margin-top: 35px;
   }
 
-  .containerChild {
-    height: 522px;
-    position: relative;
-    max-width: 100%;
-  }
+  // .containerChild {
+  //   height: 522px;
+  //   position: relative;
+  //   max-width: 100%;
+  // }
   @media screen and (max-width: 750px) {
     .topbarMainIcon {
       min-width: 100%;
@@ -844,19 +844,18 @@ header {
     padding: 0 13px 0 0;
     font-size: 16px;
   }
-  .containerChild,
-  .topbarMainIcon {
-    height: 522px;
-    position: relative;
-    max-width: 100%;
+  // .containerChild,
+  // .topbarMainIcon {
+  //   height: 522px;
+  //   position: relative;
+  //   max-width: 100%;
     //margin-left:300px;
-  }
-  .containerChild {
-    width: 373px;
-    border-radius: 8px;
-    background-color: #751201;
-    display: none;
-  }
+  // }
+  // .containerChild {
+  //   width: 373px;
+  //   border-radius: 8px;
+  //   background-color: #751201;
+  // }
 
   .image,
   .mcvSeK {
