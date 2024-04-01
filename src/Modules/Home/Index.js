@@ -4,6 +4,7 @@
 import React from "react";
 import { fetchApi, changeToSlug } from "@helpers/Common";
 /* Package Application */
+import Link from 'next/link';
 
 export default class extends React.Component {
   constructor(props) {
@@ -12,15 +13,16 @@ export default class extends React.Component {
 
     this.state = {
       dataPage: [],
-      dataPin: []
+      dataPin: [],
+      total:0
     };
   }
 
-  async componentDidMount() {
-    this._isMounted = true;
-    console.log(1111);
-    this.getData();
-  }
+  // async componentDidMount() {
+  //   this._isMounted = true;
+  //   console.log(1111);
+  //   this.getData();
+  // }
 
   // componentDidMount() {
   //   this._isMounted = true;
@@ -48,7 +50,7 @@ export default class extends React.Component {
   fetchData(pageNumber) {
     const limit = 3;
     const offset = (pageNumber - 1) * limit;
-    const apiUrl = `${process.env.API_URL}pl-news?fqnull=deleted_at&status=1&limit=${limit}&offset=${offset}`;
+    const apiUrl = `${process.env.API_URL}pl-news?fq=forcus:0&fqnull=deleted_at&status=1&limit=${limit}&offset=${offset}`;
 
     this._isMounted &&
       fetchApi(apiUrl)
@@ -57,6 +59,9 @@ export default class extends React.Component {
             this.setState({
               dataPage: result.data.data,
               currentPage: pageNumber, // Update current page number
+              total:result.data.total,
+              pageNumber:(result.data.total/3).toFixed()
+              
             });
           }
         })
@@ -99,8 +104,6 @@ export default class extends React.Component {
 
 
   getDataPin = () => {
-    
-  console.log("this.state",this.state)
     try {
       this._isMounted &&
         fetchApi(process.env.API_URL + "pl-news?fq=forcus:1&fqnull=deleted_at")
@@ -122,7 +125,7 @@ export default class extends React.Component {
       typeof this.state.dataPage[0] !== "undefined"
         ? this.state.dataPage[0]
         : [];
-    console.log(_data);
+    console.log(_data,this.state.pageNumber);
     return (
       <React.Fragment>
         <body>
@@ -154,7 +157,7 @@ export default class extends React.Component {
             <section className="tmsaticungth">
               {this.state.dataPin && this.state.dataPin.length > 0 && (
                 <div key={this.state.dataPin[0].id}className="tmsaticungth"  >
-                   <img
+                  <img
                     className="topbarMainIcon"
                     loading="eager"
                     alt=""
@@ -165,33 +168,22 @@ export default class extends React.Component {
                     }
                   /> 
 
-              <div className="container">
-                  <div className="containerChild">
-                
-                  <h3 className="mcvSeK">
-                    "`MCV S&E ký kết hợp tác truyền thông chiến lược với GIGA
-                    Digital`"
-                  </h3>
-                  <div className="image">
-                    {this.state.dataPin[0].created_at}
-                  </div>
-                  <div className="sectionFrame">
-                    <div className="voNgy1310Container">
-                      <div className="voNgy1310">
-                        "`Vào ngày 13/10, Công ty Cổ phần Thể thao và Giải trí
-                        MCV (MCV S&E) và Công ty TNHH GIGA Distribution (GIGA
-                        Digital) đã chính thức ký kết hợp tác chiến lược.`"
+                  <div className="container">
+                    <div className="containerChild">
+                      <h3 className="mcvSeK">
+                        {this.state.dataPin[0].title}
+                      </h3>
+                      <div className="image">
+                        {this.state.dataPin[0].created_at}
                       </div>
-                      <div className="haiNV">
-                        Hai đơn vị cùng hướng tới mục tiêu mang đến những giá
-                        trị thiết thực trong lĩnh lực truyền thông trên nền tảng
-                        truyền thông số, nâng tầm độ nhận diện thương hiệu trên
-                        thị trường.
+                      <div className="sectionFrame">
+                        <div className="voNgy1310Container">
+                          <div className="voNgy1310" dangerouslySetInnerHTML={ { __html: this.state.dataPin[0].content } }>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  </div>
-                </div>
                 </div>
               )}
             </section>
@@ -250,7 +242,13 @@ export default class extends React.Component {
                       <div className="numberBasedContent">
                         {item.created_at}
                       </div>
-                      <div className="mcvSeK1">{item.title}</div>
+                      <Link href={`/tin-tuc/${item.slug}`}> 
+                      <a>
+                        <div className="mcvSeK1">{item.title}</div>
+                        
+                      </a> 
+                    </Link>
+                    
                     </div>
                   </div>
                 ))}
@@ -288,7 +286,7 @@ export default class extends React.Component {
           </section> */}
 
           <div className="containerWithPagination">
-            {Array.from({ length: 10 }, (_, i) => i + 1).map((pageNumber) => {
+            {Array.from({ length: this.state.pageNumber }, (_, i) => i + 1).map((pageNumber) => {
               // Determine if the current page number should be displayed
               const shouldDisplay =
                 pageNumber <= 3 || // Display the first three numbers

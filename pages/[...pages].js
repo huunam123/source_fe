@@ -77,9 +77,10 @@ export default class extends React.Component {
 
 		if(route && slug){
 			switch (route){
-				case 'news':
+				case 'tin-tuc':
 					PageComponent = DynamicImport(() => import(/*webpackChunkName:"homepage"*/'@modules/News/Detail'));
 					break;
+				
 				default:
 					PageComponent = DynamicImport(() => import(/*webpackChunkName:"error"*/'@modules/Home/Error'));
 					break;

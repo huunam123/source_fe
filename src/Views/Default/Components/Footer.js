@@ -20,11 +20,6 @@ class Footer extends React.Component {
       <>
 
 
-
-
-
-
-
         <footer id="nl-footer">
           {/* <div className="nl-footer__top"> */}
             {/* <div className="container">  */}
@@ -67,7 +62,7 @@ class Footer extends React.Component {
                       <img
                         className="mail01Icon"
                         alt=""
-                        src="images/email.png"
+                        src="/images/email1.png"
                       />
                       <div className="emailContactandatcliniccom">
                         Email: contact@andatclinic.com
