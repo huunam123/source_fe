@@ -34,6 +34,7 @@ const environment = {
 };
 
 module.exports = {
+  forceSwcTransforms: true,
   distDir: "_next",
   poweredByHeader: false,
   env: { ...environment },

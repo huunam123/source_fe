@@ -18,6 +18,7 @@ import HideOnScroll from "@views/Default/Components/HideOnScroll";
 
 /* Package style */
 import CssBaseline from "@mui/material/CssBaseline";
+import Link from 'next/link';
 
 class Header extends React.Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class Header extends React.Component {
         <HideOnScroll {...this.props}>
 
             <header>
+              <div className="background">
             <div className="header-top">
               <div className="header-content-top">
                 <div className="text">
@@ -138,6 +140,7 @@ class Header extends React.Component {
                 </div>
               </div>
             </div>
+            </div>
 
             <div className="menuBar">
               <img
@@ -147,7 +150,11 @@ class Header extends React.Component {
                 src="/images/andat.png"
               />
               <div className="linH">
-                <div className="homepage">Trang chủ</div>
+                 {/* <div className="homepage">Trang chủ</div>  */}
+                 <Link href="/homepage" legacyBehavior>
+                     <a>Trang chủ</a>
+                 </Link>
+
                 <div className="Introduction">
                   <div className="introduction1">Giới thiệu</div>
                     <img
@@ -171,7 +178,10 @@ class Header extends React.Component {
                     src="/images/down-arrow (1).png"
                   />
                 </div>
-                <div className="menu--news">Tin tức</div>
+                {/* <div className="menu--news">Tin tức</div> */}
+                <Link href="/tin-tuc" legacyBehavior>
+                     <a>Tin tức</a>
+                 </Link>
                 <div className="menu--support">Hỗ trợ khách hàng</div>
                 <div className="menu--hotline">Liên hệ</div>
               </div>

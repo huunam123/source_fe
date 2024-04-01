@@ -216,16 +216,16 @@ body[style^="padding-right"]{
 	// 	}
 	// }
 // }
-#nl-main{
+// #nl-main{
 	
- 	max-width: 100%;
- 	margin: auto;
- 	//  overflow-y:auto;
-	// @media (min-width: 1440px){
-	// 	max-width: 1440px;
-	// }
+//  	max-width: 100%;
+//  	margin: auto;
+//  	//  overflow-y:auto;
+// 	// @media (min-width: 1440px){
+// 	// 	max-width: 1440px;
+// 	// }
 
- }
+//  }
 		
 @include media-breakpoint-down(lg){
 	
@@ -263,7 +263,7 @@ body[style^="padding-right"]{
 }
 
 .sl-section{
-	margin-top: $slSection-margin-top;
+	// margin-top: $slSection-margin-top;
 
 	@include media-breakpoint-down(md){
 		margin-top: 0;
