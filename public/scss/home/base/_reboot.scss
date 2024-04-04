@@ -178,6 +178,11 @@ textarea {
 button,
 input { /* 1 */
   overflow: visible;
+  border-radius: 7px 7px 7px 7px;
+  width: 542px;
+  height: 46px;
+  border: 1px solid;
+    color: #dadce0;
 }
 
 /**
@@ -185,10 +190,10 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
-button,
-select { /* 1 */
-  text-transform: none;
-}
+// button,
+// select { /* 1 */
+//   text-transform: none;
+// }
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.

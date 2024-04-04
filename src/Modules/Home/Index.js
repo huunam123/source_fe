@@ -286,7 +286,9 @@ export default class extends React.Component {
           </section> */}
 
           <div className="containerWithPagination">
+            
             {Array.from({ length: this.state.pageNumber }, (_, i) => i + 1).map((pageNumber) => {
+              console.log(array)
               // Determine if the current page number should be displayed
               const shouldDisplay =
                 pageNumber <= 3 || // Display the first three numbers
@@ -330,22 +332,7 @@ export default class extends React.Component {
             })}
           </div>
 
-          {/* <div className="containerWithPagination">
-            {Array.from({ length: 10 }, (_, i) => i + 1).map((pageNumber) => (
-              <div
-                key={pageNumber}
-                className={`paginationNumberBase${
-                  this.state.currentPage === pageNumber ? " active" : ""
-                }`}
-                onClick={() => this.handlePaginationClick(pageNumber)}
-              >
-                <div className="content1">
-                  <div className="number">{pageNumber}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-           */}
+        
 
           {/* <div className="containerWithPagination">
             <div className="paginationNumberBase">
